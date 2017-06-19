@@ -1,0 +1,20 @@
+from django.db import models
+from multiselectfield import MultiSelectField
+from tinymce.models import HTMLField
+
+class Blog(models.Model):
+    BLOG_CHOICES = (
+        ('1', 'TAG1'),
+        ('2', 'TAG2'),
+        ('3', 'TAG3'),
+    )
+    title = models.CharField(max_length=255)
+    description = models.CharField(max_length=300)
+    status = models.CharField(max_length=30,default=1)
+    author = models.CharField(max_length=255)
+    tag = MultiSelectField(choices=BLOG_CHOICES,max_length=255)
+    id = models.AutoField(primary_key=True)
+    class Meta:
+        verbose_name = 'Blog'
+    def __unicode__(self):
+       return self.title
