@@ -10,7 +10,7 @@ be made depending on which roles have access to add blog.
 Quick start
 -----------
 
-1. Add "polls" to your INSTALLED_APPS setting like this::
+1. Add "blog" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
         ...
