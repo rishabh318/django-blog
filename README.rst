@@ -1,11 +1,11 @@
 =====
-Polls
+Blogs
 =====
 
-Polls is a simple Django app to conduct Web-based polls. For each
-question, visitors can choose between a fixed number of answers.
-
-Detailed documentation is in the "docs" directory.
+Blogs is a simple Django app to conduct Web-based Blogs. The Blog module
+allows authorized users to maintain a blog. Blogs are a series of posts
+that are time stamped and are typically viewed by date. Blog entries can
+be made depending on which roles have access to add blog.
 
 Quick start
 -----------
