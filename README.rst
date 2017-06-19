@@ -2,7 +2,7 @@
 Blogs
 =====
 
-Blogs is a simple Django app to conduct Web-based Blogs. The Blog module
+Blogs is a simple Django app to conduct Web-based Blogs. This Blog app
 allows authorized users to maintain a blog. Blogs are a series of posts
 that are time stamped and are typically viewed by date. Blog entries can
 be made depending on which roles have access to add blog.
@@ -19,7 +19,7 @@ Quick start
 
 2. Include the polls URLconf in your project urls.py like this::
 
-    url(r'^blog/', include('polls.urls')),
+    url(r'^blog/', include('blog.urls')),
 
 3. Run `python manage.py migrate` to create the polls models.
 
