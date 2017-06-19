@@ -1,0 +1,15 @@
+MANIFEST.in
+README.rst
+setup.py
+blog/__init__.py
+blog/admin.py
+blog/apps.py
+blog/models.py
+blog/tests.py
+blog/views.py
+blog/migrations/__init__.py
+django_blogs.egg-info/PKG-INFO
+django_blogs.egg-info/SOURCES.txt
+django_blogs.egg-info/dependency_links.txt
+django_blogs.egg-info/requires.txt
+django_blogs.egg-info/top_level.txt
