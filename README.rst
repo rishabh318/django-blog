@@ -34,9 +34,6 @@ Quick start
     'default': {
         'skin': 'moono',
         'toolbar': 'full',
-        'height': 300,
-        #'width': 900,
-        'removePlugins':'forms',
         'height': 100,
         'allowedContent': True,
     },
