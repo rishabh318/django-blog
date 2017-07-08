@@ -10,7 +10,7 @@ be made depending on which roles have access to add blog.
 Quick start
 -----------
 
-1. Add "blog" to your INSTALLED_APPS setting like this::
+1. Add "blog" to your INSTALLED_APPS setting like this:
 
     INSTALLED_APPS = [
         ...
@@ -19,9 +19,42 @@ Quick start
         'ckeditor_uploader',
     ]
 
-2. Run `python manage.py migrate` to create the blogs models.
+2. Add following lines to your settings.py:
 
-3. Start the development server and visit http://127.0.0.1:8000/admin/
+    MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
+    MEDIA_URL = "/uploads/"
+
+    CKEDITOR_UPLOAD_SLUGIFY_FILENAME = False
+    CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+    CKEDITOR_IMAGE_BACKEND = "pillow"
+    CKEDITOR_UPLOAD_SLUGIFY_FILENAME = True
+    CKEDITOR_UPLOAD_PATH = "uploads/"
+
+    CKEDITOR_CONFIGS = {
+    'default': {
+        'skin': 'moono',
+        'toolbar': 'full',
+        'height': 300,
+        #'width': 900,
+        'removePlugins':'forms',
+        'height': 100,
+        'allowedContent': True,
+    },
+    }
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    STATIC_URL = '/static/'
+
+3. Add following lines to end of url.py file
+
+    urlpatterns += [
+      url(r'^media/(?P<path>.*)$', serve, {
+          'document_root': settings.MEDIA_ROOT,
+      }),
+    ]
+
+3. Run `python manage.py migrate` to create the blogs models.
+
+4. Start the development server and visit http://127.0.0.1:8000/admin/
    to create a blog (you'll need the Admin app enabled).
 
-4. Visit http://127.0.0.1:8000/blog/ to participate in the Blog.
+5. Visit http://127.0.0.1:8000/blog/ to participate in the Blog.
