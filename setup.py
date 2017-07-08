@@ -27,5 +27,6 @@ setup(
          'Pillow==4.1.1',
          'pytz==2017.2'
      ],
+  zip_safe=False,
   classifiers = [],
 )
