@@ -41,7 +41,7 @@ Quick start
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     STATIC_URL = '/static/'
 
-3. Add following lines in  url.py file
+3. Add following lines in url.py file
 
    from django.conf.urls import url, include
    from django.conf import settings
@@ -50,12 +50,10 @@ Quick start
    from django.core.urlresolvers import reverse
 
    add the following url in urlpatterns:
-
    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
    and at the end of urlpatterns:
-   
-   + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+   '+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)'
 
     urlpatterns += [
       url(r'^media/(?P<path>.*)$', serve, {
