@@ -11,16 +11,16 @@ Quick start
 -----------
 
 1. Add "blog" to your INSTALLED_APPS setting like this:
-
+```
     INSTALLED_APPS = [
         ...
         'blog',
         'ckeditor',
         'ckeditor_uploader',
     ]
-
+```
 2. Add following lines to your settings.py:
-
+```
     MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
     MEDIA_URL = "/uploads/"
 
@@ -40,19 +40,21 @@ Quick start
     }
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     STATIC_URL = '/static/'
-
+```
 3. Add following lines in url.py file
-
+```
    from django.conf.urls import url, include
    from django.conf import settings
    from django.views.static import serve
    from django.conf.urls.static import static
    from django.core.urlresolvers import reverse
-
+```
    add the following url in urlpatterns:
+```
    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
-
+```
    and at the end of urlpatterns:
+```
    '+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)'
 
     urlpatterns += [
@@ -60,7 +62,7 @@ Quick start
           'document_root': settings.MEDIA_ROOT,
       }),
     ]
-
+```
 3. Run `python manage.py makemigrations` to create the blogs models.
 
 4. Run `python manage.py migrate` to create the blogs models.
