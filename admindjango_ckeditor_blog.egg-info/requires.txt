@@ -2,5 +2,5 @@ Django==1.11.2
 django-ckeditor==5.2.2
 django-multiselectfield==0.1.7
 olefile==0.44
-Pillow==4.1.1
+Pillow==6.2.0
 pytz==2017.2
