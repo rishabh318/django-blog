@@ -1,4 +1,4 @@
-Django==1.11.2
+Django==1.11.28
 django-ckeditor==5.2.2
 django-multiselectfield==0.1.7
 olefile==0.44
