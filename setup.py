@@ -20,7 +20,7 @@ setup(
   download_url = 'https://github.com/rishabh318/django-blog/archive/master.zip', # I'll explain this in a second
   keywords = ['Blog', 'Blogs', 'django', 'ckeditor'], # arbitrary keywords
   install_requires=[
-         'Django==1.11.28',
+         'Django==1.11.29',
          'django-ckeditor==5.2.2',
          'django-multiselectfield==0.1.7',
          'olefile==0.44',
