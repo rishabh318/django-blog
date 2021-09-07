@@ -24,7 +24,7 @@ setup(
          'django-ckeditor==5.2.2',
          'django-multiselectfield==0.1.7',
          'olefile==0.44',
-         'Pillow==6.2.0',
+         'Pillow==8.3.2',
          'pytz==2017.2'
      ],
   zip_safe=False,
